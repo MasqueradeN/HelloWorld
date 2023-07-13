@@ -12,7 +12,10 @@ int main(int argc, char** argv)
     {
         cout << "  argv[" << i << "] : " << argv[i] << endl;
     }
-    Sleep( atoi(argv[1]) );
+    if (argc > 1)
+    {
+        Sleep( atoi(argv[1]) );
+    }
     cout << "Hello World!\n";
     return 0;
 }
