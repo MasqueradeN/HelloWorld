@@ -36,6 +36,47 @@ int main(int argc, char** argv)
     cout << "Hello World!\n";
     SYSTEM_INFO sisinfo;
     GetSystemInfo(&sisinfo);
-    std::cout << "Procesador: " << getProcType(sisinfo.wProcessorArchitecture) << "\n";
+    cout << "Procesador: " << getProcType(sisinfo.wProcessorArchitecture) << "\n";
+
+    //0 malvado, 128 neutro, 255 bondadoso
+    byte karma = 128;
+    char estado;
+
+    if (karma == 0 || karma < 90)
+    {
+
+    }
+
+
+    cout << "karma: " << (int)karma << "\n";
+
+
+    for (int i = 0; i < 20; i++)
+    {
+        karma += 10;
+        cout << "subiendo karma: " << (int)karma << " ";
+
+        if (karma == 0 || karma < 35)
+        {
+            cout << "Villano\n";
+        }
+        else if (karma == 35 || karma < 95)
+        {
+            cout << "Malo\n";
+        }
+        else if (karma == 95 || karma < 115)
+        {
+            cout << "Neutro\n";
+        }
+        else if (karma == 115 || karma < 200)
+        {
+            cout << "Bueno\n";
+        }
+        else
+        {
+            cout << "Bondadoso\n";
+        }
+    }
+
     return 0;
 }
