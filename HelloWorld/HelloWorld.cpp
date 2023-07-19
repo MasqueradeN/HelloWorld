@@ -40,13 +40,6 @@ int main(int argc, char** argv)
 
     //0 malvado, 128 neutro, 255 bondadoso
     byte karma = 128;
-    char estado;
-
-    if (karma == 0 || karma < 90)
-    {
-
-    }
-
 
     cout << "karma: " << (int)karma << "\n";
 
@@ -58,7 +51,7 @@ int main(int argc, char** argv)
 
         if (karma == 0 || karma < 35)
         {
-            cout << "Villano\n";
+            cout << "Lore accurate ghandi\n";
         }
         else if (karma == 35 || karma < 95)
         {
